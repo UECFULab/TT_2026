@@ -14,13 +14,19 @@ trial_name = ["trial1", "trial2", "trial3", "trial4", "trial5", "trial6", "trial
 for i = [1:4 6:10] %post index
     for j = [1 4] %task index
         path_timing = append('trial_timing/timing_',  post_name(i),  '_',  task_name(j)); 
-        path_EMG = append('data', post_name(i), '/', Task_name(j), '.csv'); 
+        path_EMG = append('data/', post_name(i), '/', Task_name(j), '.csv'); 
         savefile_name = append('emg_', post_name(i), '_', task_name(j), '.mat'); 
         file_dir = 'processed_EMG/'; 
         file = append(file_dir, savefile_name); 
         each_trial = struct('trial1', []); 
         load(path_timing); 
-        data = readmatrix(path_EMG); 
+        if i == 7 && j == 4
+            data1 = readmatrix('data/post6/Task04_01.csv'); 
+            data2 = readmatrix('data/post6/Task04_02.csv'); 
+            data = cat(2, data1, cat(1, NaN(5, 8), data2)); 
+        else
+            data = readmatrix(path_EMG); 
+        end
         data = data(4:end, 3:end); 
         data = rmmissing(data); 
         if post_name(i) == "healthysub2"
