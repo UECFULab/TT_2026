@@ -1,13 +1,13 @@
-Muscle Synergy Analysis: To perform muscle synergy analysis using NNMF on a filtered EMG dataset, run “makeNMF_Human_TenTrans.m”.
+“makeNMF_Human_TenTrans.m”: Perform muscle synergy analysis using NNMF on a filtered EMG dataset.
 
-EMG Figure: To plot EMG data, run “plot_emg.m”.
+“plot_emg.m”: Plot EMG data.
 
-Joint Angle Figure: To plot joint angle trajectories and %TAM for each measurement day, run “plot_SegmentAngle.m”.
+“plot_SegmentAngle.m”: Plot joint angle trajectories and %TAM for each measurement day.
 
-Muscle Synergy Figure: To plot the spatiotemporal patterns of muscle synergies, run “plot_synergy.m”.
+“plot_synergy.m”: Plot the spatiotemporal patterns of muscle synergies.
 
-Synergy Correlation Heatmap: To plot the results of the correlation analysis between synergies across measurement days, run “plot_synergy_correlation.m”.
+“plot_synergy_correlation.m”: Plot the results of the correlation analysis between synergies across measurement days.
 
-Synergy MMD Figure: To plot the MMD values of synergies across measurement days, run “plot_synergy_MMD.m”.
+“plot_synergy_MMD.m”: Calculate the MMD between synergies on a single measurement date and plot the trend.
 
-VAF Figure: To plot the VAF values for each measurement day, run “plot_vaf.m”.
+“plot_vaf.m”: Plot the VAF values for each measurement day.
