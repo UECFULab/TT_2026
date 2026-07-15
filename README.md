@@ -1,13 +1,31 @@
-“makeNMF_Human_TenTrans.m”: Perform muscle synergy analysis using NNMF on a filtered EMG dataset.
+### Overview 
+Data  & Program files for<br/> 
+** Paper Title **<br/>
+Authors: 
 
-“plot_emg.m”: Plot EMG data.
+### System Requirements 
+The analysis and simulation software was developed and tested using MATLAB R2025b.
 
-“plot_SegmentAngle.m”: Plot joint angle trajectories and %TAM for each measurement day.
 
-“plot_synergy.m”: Plot the spatiotemporal patterns of muscle synergies.
+### Structure of the program files (Matlab files)
+<ins>**Fig2_plot_SegmentAngle.m**</ins>
+Function to plot joint angles (deg) for the MP, PIP, and wrist joints, for Figure 2. 
 
-“plot_synergy_correlation.m”: Plot the results of the correlation analysis between synergies across measurement days.
+* Input file:
+  * **processed_marker/marker_post{exp_day}_task04.mat:** Time series of measured marker position.
+* Output file:
+  * **out_seg_figure/mp_post{exp_day}.emf:** Time series of MP angle. 
+  * **out_seg_figure/pip_post{exp_day}.emf:** Time series of PIP angle. 
+  * **out_seg_figure/TAM.emf:** TAM of each experimental days. 
 
-“plot_synergy_MMD.m”: Calculate the MMD between synergies on a single measurement date and plot the trend.
+<ins>**Fig3_FigS1_plot_emg.m**</ins>
+Function to Plot EMG Data for Figure 3 and Figure S1.
+For each measurement day, the mean and variance for all trials are calculated.
 
-“plot_vaf.m”: Plot the VAF values for each measurement day.
+* Input file:
+  * **processed_EMG/emg_post{exp_day}_task04.mat:** Time series of measured EMG data.
+  * **trial_timing/timing_post{exp_day}_task04.mat:** Timing data of motion events (Rock/Scissors/Paper)
+* Output file:
+  * **out_emg_figure/emg_task04.emf:** Time series of Selected EMG (Fig. 3). 
+  * **out_emg_figure/emgAll_task04.emf:** Time series of All EMG data (Fig. S1). 
+
