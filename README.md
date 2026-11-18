@@ -1,7 +1,7 @@
 ### Overview 
-Data  & Program files for<br/> 
-** Paper Title **<br/>
+Data  & Program files for Stage-Dependent Muscle Synergy Reorganization and Task-Related Brain Activity After Tendon Transfer<br/> 
 Authors: 
+Tetsuro Funato, Yuta Miyazaki, Takumi Shirakabe, Kengo Tsujimoto, Keiko Sone, Akira Konosu, Mitunari Abe, Yuki Hara, and Kazuhiko Seki.
 
 ### System Requirements 
 The analysis and simulation software was developed and tested using MATLAB R2025b.
